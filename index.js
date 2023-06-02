@@ -110,4 +110,9 @@ app.post("/deleteReminder", (req, res) => {
     })
 })
 
-app.listen(9000, () => console.log("Be started"))
+// app.listen(9000, () => console.log("Be started"))
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 9000;
+}
+app.listen(port, () => console.log("Server started"));
