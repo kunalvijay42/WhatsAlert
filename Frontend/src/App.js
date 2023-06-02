@@ -15,11 +15,11 @@ function App() {
   const [reminderList, setReminderList] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:9000/getAllReminder").then(res => setReminderList(res.data)) //To perform effect after a component is rendered
+    axios.get("https://whatsalert.onrender.com").then(res => setReminderList(res.data)) //To perform effect after a component is rendered
   }, [])
 
   const addReminder = () => {
-    axios.post("http://localhost:9000/addReminder", { reminderMsg, remindAt })
+    axios.post("https://whatsalert.onrender.com", { reminderMsg, remindAt })
       .then(res => setReminderList(res.data))
     setReminderMsg("")
     setRemindAt()
