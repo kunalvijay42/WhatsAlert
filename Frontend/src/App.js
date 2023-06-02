@@ -15,18 +15,18 @@ function App() {
   const [reminderList, setReminderList] = useState([])
 
   useEffect(() => {
-    axios.get("https://whatsalert.onrender.com").then(res => setReminderList(res.data)) //To perform effect after a component is rendered
+    axios.get("https://whatsalert.onrender.com/getAllReminder").then(res => setReminderList(res.data)) //To perform effect after a component is rendered
   }, [])
 
   const addReminder = () => {
-    axios.post("https://whatsalert.onrender.com", { reminderMsg, remindAt })
+    axios.post("https://whatsalert.onrender.com/addReminder", { reminderMsg, remindAt })
       .then(res => setReminderList(res.data))
     setReminderMsg("")
     setRemindAt()
   }
 
   const deleteReminder = (id) => {
-    axios.post("http://localhost:9000/deleteReminder", { id })
+    axios.post("https://whatsalert.onrender.com/deleteReminder", { id })
       .then(res => setReminderList(res.data))
   }
 
