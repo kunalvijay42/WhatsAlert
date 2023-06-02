@@ -42,8 +42,6 @@ setInterval(() => {
                             }
                             const accountSid = process.env.ACCOUNT_SID
                             const authToken = process.env.AUTH_TOKEN
-                            // const accountSid = 'AC3587a1135e5f5156434a97a408072d22'
-                            // const authToken = '6f8a50c387aa349d3637e49d4802bcdd'
                             const client = require('twilio')(accountSid, authToken);
                             client.messages
                                 .create({
