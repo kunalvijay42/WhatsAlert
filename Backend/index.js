@@ -99,14 +99,15 @@ app.post("/addReminder", (req, res) => {
 })
 app.post("/deleteReminder", (req, res) => {
     Reminder.deleteOne({ _id: req.body.id }, () => { //Deleting based on ID
-        Reminder.find({}, (err, reminderList) => {
-            if (err) {
-                console.log(err)
-            }
-            if (reminderList) {
-                res.send(reminderList)
-            }
-        })
+        // Reminder.find({}, (err, reminderList) => {
+        //     if (err) {
+        //         console.log(err)
+        //     }
+        //     if (reminderList) {
+        //         res.send(reminderList)
+        //     }
+        // })
+        res.redirect("/getAllReminder"); //After deleting the reminder redirecting back to the page with rest of data.
     })
 })
 

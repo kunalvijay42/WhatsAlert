@@ -45,7 +45,7 @@ function App() {
           <DateTimePicker className="reminder"
             value={remindAt}
             onChange={setRemindAt}
-            minDate={new Date()}
+            minDate={new Date()}  //As we can set reminder for future only.
             minutePlaceholder="mm"
             hourPlaceholder="hh"
             dayPlaceholder="DD"
