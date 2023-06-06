@@ -6,7 +6,6 @@ import DateTimePicker from "react-datetime-picker"
 import DeleteIcon from "@material-ui/icons/Delete";
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import TodayIcon from '@mui/icons-material/Today';
-import AddIcon from '@mui/icons-material/Add';
 
 function App() {
 
